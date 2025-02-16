@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#FF6F00"  # Databricks Orange
+backgroundColor = "#FDE3A7"  # Light Peach
+secondaryBackgroundColor = "#F8C471"  # Soft Orange
+textColor = "#2C3E50"  # Dark Slate
+font = "sans serif"
