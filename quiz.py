@@ -12,8 +12,13 @@ def check_password():
     """Returns `True` if the user entered the correct password."""
     def password_entered():
         """Checks whether the entered password is correct."""
-        # Retrieve the password from secrets, or use the fallback
+        # Get password from secrets or environment variable
         stored_password = os.getenv("STREAMLIT_PASSWORD", st.secrets.get("password"))
+
+        if stored_password is None:
+            st.error("No password found! Please set it in Streamlit secrets or an environment variable.")
+            return
+
         if hmac.compare_digest(st.session_state["password"], stored_password):
             st.session_state["password_correct"] = True
             del st.session_state["password"]  # Remove the password from session state
