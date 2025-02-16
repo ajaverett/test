@@ -117,7 +117,7 @@ if not st.session_state.test_started:
                 st.error("Error reading uploaded file: " + str(e))
         else:
                         # Load the default workbook.
-            default_path = "databricks_data_engineering_associate_questions_and_answers.xlsx"
+            default_path = "dbdea_q_and_a.xlsx"
             try:
                 df = pd.read_excel(default_path)
                 st.info("Using default workbook.")
