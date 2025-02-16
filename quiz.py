@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import random
 import hmac
+import os
 
 # MUST be the very first Streamlit command.
 st.set_page_config(page_title="Cute Practice Test", layout="centered")
